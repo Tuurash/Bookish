@@ -1,0 +1,93 @@
+﻿@model List<BookExchanger.BookDetail>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rejected</title>
+    <script type="text/javascript">
+    function selectAll() {
+        var items = document.getElementsByName('bId');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type == 'checkbox')
+                items[i].checked = true;
+        }
+    }
+
+    function UnSelectAll() {
+        var items = document.getElementsByName('bId');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type == 'checkbox')
+                items[i].checked = false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Back to Home", "Index")
+    </p>
+    <p>
+        <input type="button" onclick='selectAll()' value="Select All" />
+        <input type="button" onclick='UnSelectAll()' value="Unselect All" />
+    </p>
+    <form method="post">
+        <button type="submit" name="SubmitButton" value="Accept">Accept</button>
+        <table class="table" border="1">
+            <tr>
+                <th></th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Edition
+                </th>
+                <th>
+                    UsedDate
+                </th>
+                <th>
+                    UserId
+                </th>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Point
+                </th>
+            </tr>
+
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" name="bId" value="@Model[i].Id" />
+                    </td>
+                    <td>
+                        @Model[i].Title
+                    </td>
+                    <td>
+                        @Model[i].Edition
+                    </td>
+                    <td>
+                        @Model[i].UsedDate
+                    </td>
+                    <td>
+                        @Model[i].UserId
+                    </td>
+                    <td>
+                        @Model[i].Author
+                    </td>
+                    <td>
+                        @Model[i].Point
+                    </td>
+                </tr>
+            }
+        </table>
+    </form>
+</body>
+</html>

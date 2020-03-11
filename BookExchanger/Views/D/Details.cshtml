@@ -1,0 +1,56 @@
+﻿@model BookExchanger.SellPosting
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>SellPosting</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BookId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BookId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.offeredPoint)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.offeredPoint)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.BuyerId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.BuyerId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SellerId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SellerId)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "SellPostList")
+    </p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model BookExchanger.Models.DeliveryManDetail
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div align="center">
+        @{
+            ViewBag.Title = "UserDashBoard";
+        }
+
+        <fieldset>
+            <legend> User DashBoard </legend>
+
+            @if (Session["DEmail"] != null)
+            {
+                <text>
+                    Welcome <br />@Session["DEmail"].ToString()
+                </text>
+            }
+        </fieldset>
+    </div>
+    <div><div>@Html.ActionLink("Show Available Deliveries", "SellPostList")</div></div>
+    <div><div >@Html.ActionLink("Show Accepted Deliveries", "ReceivedBooks")</div></div>
+    <div>
+        <p>@Html.ActionLink("Details", "UserProfile", new { DEmail = Session["DEmail"] })</p>
+    </div>
+    <div align="right">@Html.ActionLink("LogOut", "Logout") </div>
+</body>
+</html>

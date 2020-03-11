@@ -1,0 +1,58 @@
+﻿@model BookExchanger.DeleveryManDetail
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserProfile</title>
+</head>
+<body>
+    <div>
+        <h4>DeleveryManDetail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.phone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.phone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.adress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.adress)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { DEmail = Session["DEmail"] }) |
+        @Html.ActionLink("Back", "Index",new { DEmail = Session["DEmail"] })
+    </p>
+</body>
+</html>

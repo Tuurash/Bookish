@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BookExchanger.BookDetail>
+
+    <p>
+        @Html.ActionLink("Profile", "UserProfile")||
+        @Html.ActionLink("Request Book", "RequestBook")||
+        @Html.ActionLink("Requested Book", "RequestedBook")||
+        @Html.ActionLink("Check Out", "CheckOut")||
+        @Html.ActionLink("Sell Books", "SellBook")||
+        @Html.ActionLink("History", "History")||
+        @Html.ActionLink("Logout", "Logout")||
+    </p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsedDate)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Point)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsedDate)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Point)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Buy Now", "BuyNow", new { id=item.Id }) |
+            @Html.ActionLink("Details", "BookDetails", new { id=item.Id }) |
+           
+        </td>
+    </tr>
+}
+
+</table>

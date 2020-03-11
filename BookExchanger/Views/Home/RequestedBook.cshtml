@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BookExchanger.RequestBook>
+    <p>
+        @Html.ActionLink("Profile", "UserProfile")||
+        @Html.ActionLink("Request Book", "RequestBook")||
+        @Html.ActionLink("Requested Book", "RequestedBook")||
+        @Html.ActionLink("Check Out", "CheckOut")||
+        @Html.ActionLink("Sell Books", "SellBook")||
+        @Html.ActionLink("History", "History")||
+        @Html.ActionLink("Logout", "Logout")||
+    </p>
+<p>
+    @Html.ActionLink("Create New", "RequestBook")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.point)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.point)
+        </td>
+        
+       
+    </tr>
+}
+
+</table>

@@ -1,0 +1,36 @@
+﻿@model BookExchanger.Models.CheckOutViewModel
+    <p>
+        @Html.ActionLink("Profile", "UserProfile")||
+        @Html.ActionLink("Request Book", "RequestBook")||
+        @Html.ActionLink("Requested Book", "RequestedBook")||
+        @Html.ActionLink("Check Out", "CheckOut")||
+        @Html.ActionLink("Sell Books", "SellBook")||
+        @Html.ActionLink("History", "History")||
+        @Html.ActionLink("Logout", "Logout")||
+    </p>
+<div>
+    <h4>Check Out</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offeredPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offeredPoint)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Confirm", "ConfirmBuy", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "AllBookDetails")
+</p>

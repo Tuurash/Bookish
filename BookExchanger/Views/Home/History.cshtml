@@ -1,0 +1,77 @@
+﻿@model BookExchanger.SellPosting
+    <p>
+        @Html.ActionLink("Profile", "UserProfile")||
+        @Html.ActionLink("Request Book", "RequestBook")||
+        @Html.ActionLink("Requested Book", "RequestedBook")||
+        @Html.ActionLink("Check Out", "CheckOut")||
+        @Html.ActionLink("Sell Books", "SellBook")||
+        @Html.ActionLink("History", "History")||
+        @Html.ActionLink("Logout", "Logout")||
+    </p>
+<div>
+    <h4>History</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offeredPoint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offeredPoint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+
+            @if (Model.Status == 1)
+            {
+                <label>Accepted</label>
+            }
+            
+            else if (Model.Status == 2)
+            {
+                <label>Received By Delivery Man</label>
+            }
+            else if (Model.Status == 3)
+            {
+                <label>On the Way</label>
+            }
+            else if (Model.Status == 4)
+            {
+                <label>Delivered</label>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "AllBookDetails")
+</p>

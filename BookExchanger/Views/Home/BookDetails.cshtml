@@ -1,0 +1,46 @@
+﻿@model BookExchanger.Models.BookDetails
+    <p>
+        @Html.ActionLink("Profile", "UserProfile")||
+        @Html.ActionLink("Request Book", "RequestBook")||
+        @Html.ActionLink("Requested Book", "RequestedBook")||
+        @Html.ActionLink("Check Out", "CheckOut")||
+        @Html.ActionLink("Sell Books", "SellBook")||
+        @Html.ActionLink("History", "History")||
+        @Html.ActionLink("Logout", "Logout")||
+    </p>
+<div>
+    <h4>Book Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title):
+            @Html.DisplayFor(model => model.Title)
+        </dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edition):
+            @Html.DisplayFor(model => model.Edition)
+        </dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsedDate):
+            @Html.DisplayFor(model => model.UsedDate)
+        </dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author):
+            @Html.DisplayFor(model => model.Author)
+        </dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.point):
+            @Html.DisplayFor(model => model.point)
+        </dt>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Buy", "Buy", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "AllBookDetails")
+</p>

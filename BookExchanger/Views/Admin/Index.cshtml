@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table style="margin-left:550px;">
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Hello! ADMIN</h1>
+                </td>
+                <td>
+                    <h5 style="margin-left:600px;font-size:large;color:red;">
+                        @Html.ActionLink("LogOut", "Logout")
+                    </h5>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div>
+        <table style="margin-left:200px;">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <h2>
+                        @Html.ActionLink("Add Delivery Man", "AddEmployee")
+                    </h2>
+                </td>
+                <td>
+                    <h2 style="margin-left:30px;">
+                        @Html.ActionLink("Delivery Man Details", "EmployeeDetails")
+                    </h2>
+                </td>
+                <td>
+                    <h2 style="margin-left:30px;">
+                        @Html.ActionLink("Users", "Users")
+                    </h2>
+                </td>
+                <td>
+                    <h2 style="margin-left:30px;">
+                        @Html.ActionLink("Pending Books", "Pending")
+                    </h2>
+                </td>
+                <td>
+                    <h2 style="margin-left:30px;">
+                        @Html.ActionLink("Rejected Books", "Rejected")
+                    </h2>
+                </td>
+                <td>
+                    <h2 style="margin-left:30px;">
+                        @Html.ActionLink("Sell Post", "Posting")
+                    </h2>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
