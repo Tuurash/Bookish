@@ -1,0 +1,228 @@
+body{
+  font: 18px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+ background-image: url('/img/upload.jpg');
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+
+#search{
+  
+  color:#ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+}
+
+#search form
+{
+  text-align: center;
+  padding: 2px;
+
+}
+
+
+#search form input
+{
+  padding: 15px 100px;
+ 
+}
+#search form button
+{
+  padding: 15px 20px;
+  color: red;
+ 
+}
+
+
+
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+/* Header **/
+header{
+  background:#CDDC39;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#ff0000 3px solid;
+}
+
+header a{
+  color:#3f51b5;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 13px 19px 0 0px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+
+  
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#ff4d94;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#ff4d94;
+  font-weight:bold;
+}
+
+
+
+
+
+/*Reg*/
+
+#login{
+  padding:25px;
+   
+  
+ 
+}
+
+#login h1{
+  
+   margin-bottom:40px;
+  
+ 
+}
+
+
+#login input[type="email"]{
+
+ margin-top: 35px;
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+#login input[type="text"]{
+
+    margin-top: 25px;
+  padding:4px;
+  height:35px;
+  width:250px;
+}
+#login input[type="password"]{
+
+    margin-top: 25px;
+  padding:4px;
+  height:35px;
+  width:250px;
+}
+#login form{
+      text-align: center;
+}
+
+#login textarea{
+
+    margin-top:25px;
+  padding:4px;
+  height:55px;
+  width:250px;
+}
+#login form{
+      text-align: center;
+}
+
+
+.button_2{
+  height:38px;
+  margin-top: 20px;
+  background:#ff0000;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+h2
+{
+  color: green;
+}
+h3 {
+  color: #6a7272;
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+fieldset {
+
+  padding-bottom: 13%;
+  margin-top:20px;
+}
+
+
+/*pic Mobile*/
+
+
+div.gallery {
+  border: 1px solid #ccc;
+  height: 100%
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery #close-image{
+  height: 90%;
+}
+
+div.gallery img {
+  width: 90%;
+  height: 130px;
+  
+}
+
+div.desc {
+  
+  text-align: center;
+  padding-top: 0px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.responsive {
+  padding: 0 1px;
+  margin: 0px;
+  float: left;
+  width: 10%;
+}
+
+

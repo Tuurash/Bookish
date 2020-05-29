@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Online Shopping">
+    <meta name="keywords" content="online shop center, buy,sell">
+    <title>bookexchange.com | Welcome</title>
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+  
+   <script type="text/javascript" src="myScript.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style type="text/css">
+    .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -85px;
+}
+
+</style>
+  <body>
+   
+
+
+<div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-lg-3 text-left">
+                    <h2 style="margin-top: 15px; margin-left: 100px;">bookexchange.com</h2>
+                </div>
+                <div class="col-lg-7">
+                    <div class="display-4 .text-right" style="margin-left: 200px;">
+                        Hello, User
+                    </div>
+                </div>
+                <div class="col-lg-2 text-left">
+                    <button type="button"id="loadlogout" class="btn btn-primary" style="margin-top: 15px;">LogOut</button>
+                </div>
+            </div> 
+
+            <div style="margin-top: 50px;">
+                <div class="row">
+                    <div style="margin-left: 235px; margin-top: 5px;">
+                        <a href="book.html">
+                            <i class='fas fa-home' style='font-size:30px'></i>
+                        </a>                       
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="book.html">
+                            <button type="button" class="btn btn-outline-success">Available Book</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <div class="dropdown">
+                           <a href="profile.html">
+                            <button id="loadP" class="btn btn-outline-secondary">My Profile</button>
+                        </a>
+                            </div>
+                          </div> 
+                   
+                    <div style="margin-left: 40px;">
+                        <a href="book_i_uploaded.html">
+                            <button type="button" class="btn btn-outline-secondary">Books I Uploaded</button>
+                        </a>
+                    </div>
+                    
+                    <div style="margin-left: 40px;">
+                        <a href="request_book.html">
+                            <button type="button" class="btn btn-outline-warning">Request Book</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="requested_book.html">
+                            <button type="button" class="btn btn-outline-danger">Requested Book</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="cheakout.html">
+                            <button type="button" class="btn btn-outline-info">Check Out</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px; margin-bottom: 25px;">
+                        <a href="history.html">
+                            <button type="button" class="btn btn-outline-dark">History</button>
+                        </a>
+                    </div>
+                     <div style="margin-left: 40px;">
+                        <a href="uploadbook.html">
+                            <button type="button" class="btn btn-outline-info">Upload Book</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+<div class="container" align="center">
+            <div class="row">
+                <h1 class="text-primary text-bold" style="margin-left: 420px; margin-top: 10px;">Available Books</h1>
+            </div>
+        </div>
+<marquee behavior="scroll" direction="left"><h2>Welcome to our bookexchange system, Here you will find all kind of book</h2></marquee>
+ <center>
+
+
+ <input class="form-control" id="myInput" type="text" placeholder="Search Book.." style="width: 20%">
+  <div class="container">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div id="confirmMessage" class="col-lg-6 text-lg-left" style="margin-top: 40px;"></div>
+            </div>
+        </div>
+         <div id="successMessage" class="col-lg-10 text-lg-center" style="margin-top: 15px;"></div>
+  
+ <div class="container-fluid">
+            <div class="userList" style="margin-top: 50px;">
+                <div class="row">
+                    <div class="col-lg-12 text-lg-center">
+                        <table id="listBook" class="table table-striped table-hover">
+                            <thead>
+      <tr>
+       <th>Book Id</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Edition</th>
+        <th>Used Month</th>
+        <th>Points</th>
+         <th>Option</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+
+    </tbody>
+  </table>
+ </div>
+                </div>
+            </div>
+        </div>
+</center> 
+
+
+
+        
+        
+ 
+  </body>
+</html>
+
+
+

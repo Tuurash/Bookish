@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Online Shopping">
+    <meta name="keywords" content="online shop center, buy,sell">
+    <title>bookexchange.com | Welcome</title>
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+  
+   <script type="text/javascript" src="myScript.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+
+<style type="text/css">
+    .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -85px;
+}
+</style>
+
+  <body>
+  <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-lg-3 text-left">
+                    <h2 style="margin-top: 15px; margin-left: 100px;">bookexchange.com</h2>
+                </div>
+                <div class="col-lg-7">
+                    <div class="display-4 .text-right" style="margin-left: 200px;">
+                        Hello, User
+                    </div>
+                </div>
+                <div class="col-lg-2 text-left">
+                    <button type="button"id="loadlogout" class="btn btn-primary" style="margin-top: 15px;">LogOut</button>
+                </div>
+            </div> 
+
+            <div style="margin-top: 50px;">
+                <div class="row">
+                    <div style="margin-left: 235px; margin-top: 5px;">
+                        <a href="book.html">
+                            <i class='fas fa-home' style='font-size:30px'></i>
+                        </a>                       
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="book.html">
+                            <button type="button" class="btn btn-outline-success">Available Book</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <div class="dropdown">
+                           <a href="profile.html">
+                            <button id="loadP" class="btn btn-outline-secondary">My Profile</button>
+                        </a>
+                            </div>
+                          </div> 
+                   
+                    <div style="margin-left: 40px;">
+                        <a href="book_i_uploaded.html">
+                            <button type="button" class="btn btn-outline-secondary">Books I Uploaded</button>
+                        </a>
+                    </div>
+                    
+                    <div style="margin-left: 40px;">
+                        <a href="request_book.html">
+                            <button type="button" class="btn btn-outline-warning">Request Book</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="requested_book.html">
+                            <button type="button" class="btn btn-outline-danger">Requested Book</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="cheakout.html">
+                            <button type="button" class="btn btn-outline-info">Check Out</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px; margin-bottom: 25px;">
+                        <a href="history.html">
+                            <button type="button" class="btn btn-outline-dark">History</button>
+                        </a>
+                    </div>
+                     <div style="margin-left: 40px;">
+                        <a href="uploadbook.html">
+                            <button type="button" class="btn btn-outline-info">Upload Book</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+      </div>
+ <div class="container">
+            <div class="row">
+                <h1 class="text-primary text-bold" style="margin-left: 480px; margin-top: 30px;">Upload Book</h1>
+            </div>
+        </div>
+<div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div id="successMessage" class="col-lg-10 text-lg-center" style="margin-top: 15px;"></div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="addForm" style="margin-top: 35px;">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6" style="margin-left: 10px;">
+                            <div class="form-group">
+                              <label for="name">Book Title:</label>
+                              <input type="text" class="form-control" id="title" placeholder="Enter Book Title.." name="title" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="bookAuthor">Book Author:</label>
+                              <input type="text" class="form-control" id="bookAuthor" placeholder="Enter Author Name.." name="bookAuthor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookEdition">Book Edition:</label>
+                                <input type="number" class="form-control" id="bookEdition" placeholder="Enter Edition"  name="bookEdition" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookMonth">Used Month:</label>
+                                <input type="number" class="form-control" id="bookMonth" placeholder="Enter Used Month" name="bookMonth" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="points">Points:</label>
+                                <input type="number" class="form-control" id="point" placeholder="Enter Points" name="points" required>
+                            </div>
+                            <div class="form-group">                                                             
+                                <button type="submit" id="loadAdd" class="btn btn-success font-weight-bold" style="margin-left: 250px;">Upload</button>
+                            </div>                     
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+        </div>
+
+ 
+
+        
+        
+ 
+  </body>
+</html>
+
+
+
