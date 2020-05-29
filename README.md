@@ -6,7 +6,7 @@ via earning points through contributing to the policies \n
 ![](proposedDB.JPG)
 
 # Group
-Md. Mohaimanul Haque
-Abdullah Shafi
-Souvik Das
-Zahir Mahmud Mihon
+Md. Mohaimanul Haque  
+Abdullah Shafi  
+Souvik Das  
+Zahir Mahmud Mihon  
