@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>bookexchange.com</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">       
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-lg-10 text-left text-lg-center">
+                    <h2 style="margin-top: 15px; margin-left: 200px;">bookexchange.com</h2>
+                </div>
+                <div class="col-lg-2 text-left">
+                    <button id="loadlogout" type="button" class="btn btn-primary" style="margin-top: 15px;">LogOut</button>
+                </div>
+            </div> 
+
+            <div style="margin-top: 50px;">
+                <div class="row">
+                    <div style="margin-left: 235px; margin-top: 5px;">
+                        <a href="home.html">
+                            <i class='fas fa-home' style='font-size:30px'></i>
+                        </a>                       
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+                              Delivery Man
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="add.html">Add</a>
+                              <a class="dropdown-item" href="edetails.html">Details</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="users.html">
+                            <button type="button" class="btn btn-outline-secondary">Users</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="accepted.html">
+                            <button type="button" class="btn btn-outline-success">Books</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="pending.html">
+                            <button type="button" class="btn btn-outline-warning">Pending Books</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="rejected.html">
+                            <button type="button" class="btn btn-outline-danger">Rejected Books</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="delivery-status.html">
+                            <button type="button" class="btn btn-outline-info">Delivery Status</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px; margin-bottom: 25px;">
+                        <a href="summary.html">
+                            <button type="button" class="btn btn-outline-dark">Summary</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="summary1" style="margin-top: 50px;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="text-success text-lg-center">Delivery Status</h2>
+                        <div class="card bg-light text-dark">
+                            <div class="card-body">
+                                <div id="statusCountChart">
+
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="text-success text-lg-center">Top 10 Book Uploader</h2>
+                        <div class="card bg-light text-dark">
+                            <div class="card-body">
+                                <div id="topUploaderChart">
+
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="summary2" style="margin-top: 40px;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="text-success text-lg-center">Top 10 Book Seller</h2>
+                        <div class="card bg-light text-dark">
+                            <div class="card-body">
+                                <div id="topSellerChart">
+
+                                </div>
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="text-success text-lg-center">Top 10 Book Buyer</h2>
+                        <div class="card bg-light text-dark">
+                            <div class="card-body">
+                                <div id="topBuyerChart">
+
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+        	var username = sessionStorage.getItem("mail");
+var id=sessionStorage.getItem("id");
+var password = sessionStorage.getItem("pass");
+            // Load google charts
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            google.charts.setOnLoadCallback(drawUploaderChart);
+            google.charts.setOnLoadCallback(drawSellerChart);
+            google.charts.setOnLoadCallback(drawBuyerChart);
+            
+            // Draw the chart and set the chart values
+            function drawChart() {
+                $.ajax({
+                    url: "https://localhost:44327/api/sellPostings/delevery/count",
+                    method:"get",
+                    headers:{
+                ContentType:"application/json",
+                'Authorization': 'Basic ' + btoa(username + ':' + password)
+            },
+                    complete:function(xmlHttp,status){
+                        if(xmlHttp.status==200)
+                        {
+                            var gdata = new google.visualization.DataTable();
+                            gdata.addColumn('string', 'Status');
+                            gdata.addColumn('number', 'Count');
+
+                            var data=xmlHttp.responseJSON;
+
+                            for(x in data)
+                            {
+                                gdata.addRow([x.toUpperCase(), data[x]]);
+                            }
+                            
+                            var options = {'width':700, 'height':450};
+            
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('statusCountChart'));
+                            chart.draw(gdata, options);
+                        }
+                    }
+                });
+            }
+
+
+            function drawUploaderChart() {
+                $.ajax({
+                    url: "https://localhost:44327/api/books/uploader",
+                    method:"get",
+                    headers:{
+                ContentType:"application/json",
+                'Authorization': 'Basic ' + btoa(username + ':' + password)
+            },
+                    complete:function(xmlHttp,status){
+                        if(xmlHttp.status==200)
+                        {
+                            var gdata = new google.visualization.DataTable();
+                            gdata.addColumn('string', 'Email');
+                            gdata.addColumn('number', 'Count');
+
+                            var data=xmlHttp.responseJSON;
+                            
+                            for(i = 0; i < data.length; i++)
+                            {
+                                gdata.addRow([data[i]['email'], data[i]['count']]);
+                            }
+                            
+                                                    
+                            var options = {'width':700, 'height':450};
+            
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('topUploaderChart'));
+                            chart.draw(gdata, options);
+                        }
+                    }
+                });              
+            }
+
+
+            function drawSellerChart() {
+                $.ajax({
+                    url: "https://localhost:44327/api/books/seller",
+                    method:"get",
+                    headers:{
+                ContentType:"application/json",
+                'Authorization': 'Basic ' + btoa(username + ':' + password)
+            },
+                    complete:function(xmlHttp,status){
+                        if(xmlHttp.status==200)
+                        {
+                            var gdata = new google.visualization.DataTable();
+                            gdata.addColumn('string', 'Email');
+                            gdata.addColumn('number', 'Count');
+
+                            var data=xmlHttp.responseJSON;
+                            
+                            for(i = 0; i < data.length; i++)
+                            {
+                                gdata.addRow([data[i]['email'], data[i]['count']]);
+                            }
+                            
+                                                    
+                            var options = {'width':700, 'height':450};
+            
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('topSellerChart'));
+                            chart.draw(gdata, options);
+                        }
+                    }
+                });              
+            }
+
+
+            function drawBuyerChart() {
+                $.ajax({
+                    url: "https://localhost:44327/api/books/buyer",
+                    method:"get",
+                    headers:{
+                ContentType:"application/json",
+                'Authorization': 'Basic ' + btoa(username + ':' + password)
+            },
+                    complete:function(xmlHttp,status){
+                        if(xmlHttp.status==200)
+                        {
+                            var gdata = new google.visualization.DataTable();
+                            gdata.addColumn('string', 'Email');
+                            gdata.addColumn('number', 'Count');
+
+                            var data=xmlHttp.responseJSON;
+                            
+                            for(i = 0; i < data.length; i++)
+                            {
+                                gdata.addRow([data[i]['email'], data[i]['count']]);
+                            }
+                            
+                                                    
+                            var options = {'width':700, 'height':450};
+            
+                            // Display the chart inside the <div> element with id="piechart"
+                            var chart = new google.visualization.PieChart(document.getElementById('topBuyerChart'));
+                            chart.draw(gdata, options);
+                        }
+                    }
+                });              
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>bookexchange.com</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">       
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="myScript.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-lg-3 text-left">
+                    <h2 style="margin-top: 15px; margin-left: 100px;">bookexchange.com</h2>
+                </div>
+                <div class="col-lg-7">
+                    <div class="display-4 .text-right" style="margin-left: 200px;">
+                        Hello, ADMIN
+                    </div>
+                </div>
+                <div class="col-lg-2 text-left">
+                    <button id="loadlogout" type="button" class="btn btn-primary" style="margin-top: 15px;">LogOut</button>
+                </div>
+            </div> 
+
+            <div style="margin-top: 50px;">
+                <div class="row">
+                    <div style="margin-left: 235px; margin-top: 5px;">
+                        <a href="home.html">
+                            <i class='fas fa-home' style='font-size:30px'></i>
+                        </a>                       
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+                              Delivery Man
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="add.html">Add</a>
+                              <a class="dropdown-item" href="edetails.html">Details</a>
+                            </div>
+                          </div> 
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="users.html">
+                            <button type="button" class="btn btn-outline-secondary">Users</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="accepted.html">
+                            <button type="button" class="btn btn-outline-success">Books</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="pending.html">
+                            <button type="button" class="btn btn-outline-warning">Pending Books</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="rejected.html">
+                            <button type="button" class="btn btn-outline-danger">Rejected Books</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <a href="delivery-status.html">
+                            <button type="button" class="btn btn-outline-info">Delivery Status</button>
+                        </a>
+                    </div>
+                    <div style="margin-left: 40px; margin-bottom: 25px;">
+                        <a href="summary.html">
+                            <button type="button" class="btn btn-outline-dark">Summary</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="firstRow" style="margin-top: 40px;">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 bg-primary text-white font-weight-bold text-lg-center">
+                        <h1>Delivery Man:</h1>
+                        <h3 id="deliveryman"></h3>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 bg-secondary text-white font-weight-bold text-lg-center">
+                        <h1>Users:</h1>
+                        <h3 id="user"></h3>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 bg-info text-white font-weight-bold text-lg-center">
+                        <h1>Total Deliveries:</h1>
+                        <h3 id="totaldeliveries"></h3>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="secondRow" style="margin-top: 40px;">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2 bg-success text-white font-weight-bold text-lg-center">
+                        <h1>Accepted Books:</h1>
+                        <h3 id="totalaccepted"></h3>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 bg-warning text-black font-weight-bold text-lg-center">
+                        <h1>Pending Books:</h1>
+                        <h3 id="totalpending"></h3>    
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 bg-danger text-white font-weight-bold text-lg-center">
+                        <h1>Rejected Books:</h1>
+                        <h3 id="totalrejected"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
