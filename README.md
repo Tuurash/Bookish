@@ -3,9 +3,8 @@
 via earning points through contributing to the policies</h5>  
 
 #### DATABASE
-![](proposedDB.JPG)
 <p align="center">
-  <img align="center" src="https://github.com/Tuurash/Bookish/blob/master/proposedDB.JPG" width="1750" height="160" />
+  <img align="center" src="https://github.com/Tuurash/Bookish/blob/master/proposedDB.JPG" width="175" height="160" />
 </p>
 # Group
 Md. Mohaimanul Haque  
