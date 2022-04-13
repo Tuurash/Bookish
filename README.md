@@ -4,7 +4,7 @@ via earning points through contributing to the policies</h5>
 
 #### DATABASE
 <p align="center">
-  <img align="center" src="https://github.com/Tuurash/Bookish/blob/master/proposedDB.JPG" width="175" height="160" />
+  <img align="center" src="https://github.com/Tuurash/Bookish/blob/master/proposedDB.JPG" width="500" height="300" />
 </p>
 # Group
 Md. Mohaimanul Haque  
