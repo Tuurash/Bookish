@@ -2,9 +2,11 @@
 <h5 align="center">A book exchanging web platform, where users can swap and acquire or trade books from among themselves /n
 via earning points through contributing to the policies</h5>  
 
-# DB
+#### DATABASE
 ![](proposedDB.JPG)
-
+<p align="center">
+  <img align="center" src="https://github.com/Tuurash/Bookish/blob/master/proposedDB.JPG" width="1750" height="160" />
+</p>
 # Group
 Md. Mohaimanul Haque  
 Abdullah Shafi  
