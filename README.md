@@ -7,14 +7,14 @@ via earning points through contributing to the policies</h5>
   <img align="center" src="https://github.com/Tuurash/Bookish/blob/master/proposedDB.JPG" width="500" height="300" />
 </p>
 
-#### FEATURES
-- Book Showcase
-- Book Exchange
-- Earn Credit via Showcasing/donating or contributing on the platform
-- Dashboard-Summary, Profile, Bookmark
-- Fully Automated Management, task contribution system
+#### Prerequisites
+- Asp.net MVC (.net 4.7)
+- Entity framework, linq
+- Restful api
+- repository patterned
+- Ms Sql Server
 
-#### FEATURES
+#### FEATURES :+1:
 - Book Showcase
 - Book Exchange
 - Earn Credit via Showcasing/donating or contributing on the platform
