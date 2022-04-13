@@ -1,6 +1,6 @@
-# Bookish
-A book exchanging web platform, where users can swap and acquire or trade books from among themselves /n
-via earning points through contributing to the policies \n
+<h2 align="center">BOOKISH</h2>  
+<h5 align="center">A book exchanging web platform, where users can swap and acquire or trade books from among themselves /n
+via earning points through contributing to the policies</h5>  
 
 # DB
 ![](proposedDB.JPG)
